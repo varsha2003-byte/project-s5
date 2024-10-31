@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Learning at Home</title>
+    <style>
+        @font-face {
+            font-family: 'HeadFont';
+            src: url('head.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'RetrogradeFont';
+            src: url('Retrograde.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'RefileFont';
+            src: url('Refile.otf') format('opentype');
+        }
+
+        :root {
+            --primary-blue: #40C4E7;
+            --primary-green: #4CAF50;
+            --text-dark: #333333;
+            --background: #F5FEFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(230, 255, 255);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .centered-container {
+            width: 80%; /* Increased from 70% */
+            max-width: 1400px; /* Increased from 1200px */
+            aspect-ratio: 2 / 1;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            background-image: url('div.png');
+            background-position: 90% 0;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 32px; /* Increased from 28px */
+            color: var(--text-dark);
+            font-family: 'RefileFont', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .hat-icon {
+            width: 50px; /* Increased from 40px */
+            height: auto;
+            vertical-align: middle;
+            margin-right: 12px; /* Slightly increased from 10px */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--primary-green);
+            color: white;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+            height: calc(100% - 60px);
+        }
+
+        .hero-content {
+            flex: 0 0 40%;
+            padding-right: 20px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            color: rgb(225, 193, 150);
+            margin-bottom: 10px;
+            font-family: 'HeadFont', sans-serif;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-family: 'RetrogradeFont', sans-serif;
+        }
+
+        .get-started-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .get-started-btn:hover {
+            transform: scale(1.05);
+            background-color: var(--primary-green);
+        }
+
+        @media (max-width: 768px) {
+            .centered-container {
+                width: 90%;
+                aspect-ratio: auto;
+                background-size: 100% auto;
+                background-position: bottom center;
+            }
+
+            .hero-content {
+                flex: 0 0 100%;
+                padding-right: 0;
+                margin-bottom: 200px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hat-icon {
+                width: 40px; /* Adjusted for mobile */
+            }
+
+            .logo {
+                font-size: 28px; /* Adjusted for mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="centered-container">
+        <nav>
+            <div class="logo">
+                <img src="hat.png" alt="Hat Icon" class="hat-icon"> EasyLearn
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#login">Sign Up</a>
+            </div>
+        </nav>
+
+        <main class="hero">
+            <div class="hero-content">
+                <h1>Hey, Let's Start Learning</h1>
+                <p>Welcome to our innovative learning platform, where a treasure trove of study resources meets an extensive book library, empowering you to explore and excel in your educational journey.</p>
+                <a href="#get-started" class="get-started-btn">Get Started</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
